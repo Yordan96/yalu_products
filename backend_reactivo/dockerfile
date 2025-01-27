@@ -1,0 +1,10 @@
+FROM openjdk:21-jdk-slim
+
+# Copia el archivo JAR generado por Maven
+COPY target/*.jar app.jar
+
+# Expone el puerto del microservicio
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación
+ENTRYPOINT ["java", "-jar", "app.jar"]
