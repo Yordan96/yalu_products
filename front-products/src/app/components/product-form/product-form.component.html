@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Crear nuevo proeducto</h2>
+    <form (ngSubmit)="submitForm()" class="p-4 border rounded shadow-sm bg-light">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" id="name" [(ngModel)]="product.name" name="name" class="form-control"
+                placeholder="Enter product name" required />
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">precio</label>
+            <input type="number" id="price" [(ngModel)]="product.price" name="price" class="form-control"
+                placeholder="Enter product price" required />
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">categoria</label>
+            <input type="text" id="category" [(ngModel)]="product.category" name="category" class="form-control"
+                placeholder="Enter product category" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Guardar</button>
+    </form>
+</div>
